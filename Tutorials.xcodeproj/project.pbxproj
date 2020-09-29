@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		456A519F2522F3030032BF0C /* HTTPService.m in Sources */ = {isa = PBXBuildFile; fileRef = 456A519E2522F3030032BF0C /* HTTPService.m */; };
 		45AACA0D2522ED3A002EB5AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AACA0C2522ED3A002EB5AD /* AppDelegate.m */; };
 		45AACA102522ED3A002EB5AD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AACA0F2522ED3A002EB5AD /* SceneDelegate.m */; };
 		45AACA132522ED3A002EB5AD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AACA122522ED3A002EB5AD /* ViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		456A519D2522F3030032BF0C /* HTTPService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPService.h; sourceTree = "<group>"; };
+		456A519E2522F3030032BF0C /* HTTPService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTPService.m; sourceTree = "<group>"; };
 		45AACA082522ED3A002EB5AD /* Tutorials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tutorials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45AACA0B2522ED3A002EB5AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		45AACA0C2522ED3A002EB5AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		456A519C2522F2D50032BF0C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				456A519D2522F3030032BF0C /* HTTPService.h */,
+				456A519E2522F3030032BF0C /* HTTPService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		45AAC9FF2522ED3A002EB5AD = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +73,7 @@
 		45AACA0A2522ED3A002EB5AD /* Tutorials */ = {
 			isa = PBXGroup;
 			children = (
+				456A519C2522F2D50032BF0C /* Services */,
 				45AACA0B2522ED3A002EB5AD /* AppDelegate.h */,
 				45AACA0C2522ED3A002EB5AD /* AppDelegate.m */,
 				45AACA0E2522ED3A002EB5AD /* SceneDelegate.h */,
@@ -146,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45AACA132522ED3A002EB5AD /* ViewController.m in Sources */,
+				456A519F2522F3030032BF0C /* HTTPService.m in Sources */,
 				45AACA0D2522ED3A002EB5AD /* AppDelegate.m in Sources */,
 				45AACA1E2522ED3D002EB5AD /* main.m in Sources */,
 				45AACA102522ED3A002EB5AD /* SceneDelegate.m in Sources */,
