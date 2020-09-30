@@ -17,7 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [[HTTPService instance] getTutorials];
+    [[HTTPService instance] getTutorials:^(NSDictionary * _Nullable dataDict, NSString * _Nullable errMessage) {
+        if(dataDict) {
+            NSLog(@"Tutorials: %@", dataDict);
+        } else if (errMessage) {
+            // alert user and display the error message
+        }
+    }];
 }
 
 

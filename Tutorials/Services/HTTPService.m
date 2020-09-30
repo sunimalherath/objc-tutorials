@@ -22,7 +22,7 @@
     return sharedInstance;
 }
 
-- (void) getTutorials {
+- (void) getTutorials:(nullable onComplete)completionHandler {
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%s%s", URL_BASE, URL_TUTORIALS]];
     NSURLSession *session = [NSURLSession sharedSession];
     [[session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -31,10 +31,13 @@
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
             
             if (err == nil) {
-                NSLog(@"JSON: %@",json.debugDescription);
+                completionHandler(json, nil);
+            } else {
+                completionHandler(nil, @"Currupt data, please try again");
             }
         } else {
             NSLog(@"Err: %@", error.debugDescription);
+            completionHandler(nil, @"Trouble connecting to the server");
         }
     }] resume];
 }
