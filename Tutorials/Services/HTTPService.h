@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HTTPService : NSObject
 
 + (id) instance;
+- (void) getTutorials;
 
 @end
 
